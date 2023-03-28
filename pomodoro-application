@@ -1,0 +1,35 @@
+from tkinter import *
+from PIL import ImageTk, Image
+
+# ---------------------------- CONSTANTS ------------------------------- #
+PINK = "#e2979c"
+RED = "#e7305b"
+GREEN = "#9bdeac"
+YELLOW = "#f7f5dd"
+FONT_NAME = "Courier"
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 20
+
+# ---------------------------- TIMER RESET ------------------------------- # 
+
+# ---------------------------- TIMER MECHANISM ------------------------------- # 
+
+# ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
+
+# ---------------------------- UI SETUP ------------------------------- #
+
+
+# getting the window
+window = Tk()
+window.title("POMODORO")
+window.minsize(width=400, height=400)
+# setting canvas, to get one thing on top of other(timer over the image)
+canvas = Canvas(width=400, height=400, bg=PINK, highlightthickness=0)
+tomato_img = PhotoImage(file="tomato.png")
+canvas.create_image(200,150,image=tomato_img)
+canvas.create_text(200,170,text="00:00",fill='white',font=("Arial",30,"bold"))
+
+canvas.pack()
+
+window.mainloop()
